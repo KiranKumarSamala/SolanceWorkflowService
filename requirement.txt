@@ -1,0 +1,121 @@
+Solance Senior Full Stack Engineer
+Design & coding challenge
+
+28th April 2025
+
+Who is Benjamin Finance (Solance Europe Ltd)?
+Benjamin (soon to be launched as Solance Europe Ltd) is redefining financial services
+for the B2B market, with a dedicated focus on family offices and corporate service
+providers - sectors that are currently overlooked by most existing banks. We are
+currently in the process of obtaining an EMI (Electronic Money Institution) license in the
+UK and Ireland, with a long-term vision to evolve into a fully licensed bank by 2027. Our
+mission is to combine the technological advantages of a neobank with the
+personalized, high-touch service of a private bank - delivering exceptional personalised
+support, tailored to the specific needs of our clients.
+We approach everything with an open mind, we are solutions-driven and we love to
+solve our customers challenges using our slick software design & coding skills.
+
+How we work
+Our development process will follow this sequence:
+1. Product owners will create the business requirements
+2. Engineers will work with the item being managed via Monday.com using GitHub
+as repository
+3. Once complete, work goes into code review where at least two other engineers
+need to give their thumbs up in GitHub
+4. At this point the code is deployed and testable in our AWS Dev environment
+5. Once your work is reviewed, merged and tested by Engineers and Product
+owners, it will be automatically deployed to our staging environment
+6. One final check and you will deploy the change to production in coordination
+with the Release team (Business & Tech members)
+7. We expect to deploy into Production multiple times a week to start with, as we
+launch & grow, we will release daily as needed.
+
+Why the coding challenge?
+Our Full Stack Engineers need to have the appropriate level of hands-on technical skills
+required to design, implement and launch components of our exciting Banking
+Platform.
+A coding challenge will be a standard part of every engineer hire no matter what level
+the role is at.
+So naturally, it’s a good idea to see some of your work and to get some insight into your
+approach to solving problems. The challenge below can be implemented in an hour or
+two or it can be done over several hours as you choose - the amount of effort put in is up
+to you. We recommend spending no more than 3-4 hours of direct effort in total on this
+but do allocate some of this time to outlining where else you would take the design and
+the code to extend/enhance and harden the solution so it’s ready for Prime-time
+banking.
+Also please spend around an hour outlining how you would roll out the React Native UI
+utilizing well proven AI Code generation tools to speed up the development of a single UI
+codebase with excellent UX across iOS Safari, Android, Windows Chrome & Edge , Mac
+OS Safari & Chrome Browser, iPadOS Safari and Android Tablet Chrome in that order of
+channel priority.
+There are several components required in this exercise, and you can decide if you want
+to put most of your effort into one just component, or into all components but the wider
+your implementation the easier it is for us to see your potential and ability to see the big
+picture in your work.
+
+Requirements
+Solance will process many Customer instructions & transactions per second (peak
+traffic of 100 tps to cover us for the next 2 years). We would like you to build a Workflow
+service which consumes the following customer requests via an endpoint:
+1. Register customer
+2. Open customer account
+3. Create customer deposit transaction (pay-in from our customer)
+4. Create customer payment instruction (pay-out to a beneficiary of our customer)
+The workflow service should validate and then process those messages in some way
+and deliver a response back to a front-end frontend containing the processed
+information/results based on the consumed message. Please implement this on AWS in
+Java with React Native in mind as the UI technology
+
+Message Consumption
+The goal is to expose an endpoint which can consume workflow requests.
+
+Message Processor
+The goal is to process messages received from the message consumption endpoint.
+
+Message Frontend
+The goal is to render the data from the output of the other two components.
+Your options here may include a list of the consumed messages, a graph
+of processed data, or a global map with a real-time visualisation. Consider how this
+hooks up to the UI React Native code in a way that keeps view and controller code
+separated .
+Here is an example (greatly simplified for convenience so this is not realistic) of the
+payment instruction message that will be POSTed (will be assumed by Solance during
+the code review) to your application:
+{"userId": "134256", "Solance From": "EUR", "Solance To": "GBP",
+"amountSell": 1000, "amountBuy": 747.10, "rate": 0.7471,
+"timePlaced" : "24-JAN-18 10:27:44", “beneficiary IBAN”: “”, "originatingCountry" : "FR",
+"paymentRef" : "Invoice nr 12345", "purposeRef" : "invoice payment"}
+How to impress
+There are many ways to complete this challenge – none of which
+should take you more than a few hours in total. Just because you take an easy
+approach won’t set you back in our eyes. Easy might just mean you’re
+busy - we understand. Either way, we look for the following:
+• Can you write clean, readable, reusable, secure and maintainable code?
+• Do you have a good command over OOP and design patterns?
+
+• Have you considered how the automation should be built to allow rapid build,
+test, deploy, end to end test, monitoring, alerting. These can be covered in a few
+lines each so no major detail required here
+• Your approach to writing tests, you don’t need to cover all your code with tests,
+just provide a sample and describe your overall approach and how it would be
+applied comprehensively
+
+How to submit
+Once you’re ready, please share the following three details with our team via email:
+1. The endpoint we should POST messages to during our review process
+2. The frontend URL we should load to view the output
+
+3. The public GitHub repository where we can review your code (including a one-
+page document briefly outlining your approach to the project in the README.md
+
+in the GitHub repo)If hosted in a private Github repo please provide access to
+Github user sriprasanna & philomalleyGH
+4. A short outline (max 500 words – 1 A4 page font size 12) of the approach you
+would recommend for leveraging AI Tooling to maximise your velocity in
+designing and delivering one or more of the following:
+a. the back end services code including the unit & integrations tests
+b. the iaC for creating and monitoring the AWS infrastructure required for a
+typical Enterprise set of services that support a customer UI. Also if
+posisbel consider how tests could be written to test your Iac
+c. the UI using React Native with considerations outlined above in the
+“Message Frontend” section, including automated UI & API Testing
