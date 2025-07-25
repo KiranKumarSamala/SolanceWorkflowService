@@ -58,7 +58,7 @@
 ## Running the Service
 1. Build: `mvn clean install`
 2. Run: `mvn spring-boot:run`
-3. Access API docs: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
 
 ## Containerization
 - Dockerfile: Build a containerized Spring Boot app (OpenJDK 17)
